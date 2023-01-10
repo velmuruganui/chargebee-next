@@ -1,8 +1,0 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/customers": "pages/customers.js",
-  "/customers/[customers]": "pages/customers/[customers].js",
-  "/": "pages/index.js"
-}
