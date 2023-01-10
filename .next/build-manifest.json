@@ -1,44 +1,47 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills.js"
+    "static/chunks/polyfills-c67a75d1b6f99dc8.js"
   ],
-  "devFiles": [
-    "static/chunks/react-refresh.js"
-  ],
-  "ampDevFiles": [
-    "static/chunks/webpack.js",
-    "static/chunks/amp.js"
-  ],
+  "devFiles": [],
+  "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
+    "static/VYG3dqhJvDgyWrTE_WaEf/_buildManifest.js",
+    "static/VYG3dqhJvDgyWrTE_WaEf/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
     "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
+      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-c52c9402a67f7413.js",
+      "static/chunks/664-6863c832d33388a7.js",
+      "static/chunks/pages/index-48983e97ccbccb6d.js"
     ],
     "/_app": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_app.js"
+      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-c52c9402a67f7413.js",
+      "static/css/7570cfebe0d8acf7.css",
+      "static/chunks/pages/_app-ec9bb7fbf1282711.js"
     ],
     "/_error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_error.js"
+      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-c52c9402a67f7413.js",
+      "static/chunks/pages/_error-a4ba2246ff8fb532.js"
     ],
     "/customers": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/customers.js"
+      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-c52c9402a67f7413.js",
+      "static/chunks/664-6863c832d33388a7.js",
+      "static/chunks/pages/customers-58e7af865952d33c.js"
     ],
     "/customers/[customers]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/customers/[customers].js"
+      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/framework-5f4595e5518b5600.js",
+      "static/chunks/main-c52c9402a67f7413.js",
+      "static/chunks/pages/customers/[customers]-3834ce122e961feb.js"
     ]
   },
   "ampFirstPages": []

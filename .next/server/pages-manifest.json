@@ -1,8 +1,11 @@
 {
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/customers": "pages/customers.js",
+  "/api/revalidate": "pages/api/revalidate.js",
+  "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/": "pages/index.html",
+  "/_error": "pages/_error.js",
   "/customers/[customers]": "pages/customers/[customers].js",
-  "/": "pages/index.js"
+  "/customers": "pages/customers.js",
+  "/404": "pages/404.html"
 }
