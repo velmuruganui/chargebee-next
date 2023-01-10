@@ -1,14 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
 
-
 export default function CustomersPage({customers}){
   return(
     <>
       <Head>
         <meta name="robots" content="noindex,nofollow"></meta>
         <title>Customers & Testimonials - Chargebee</title>
-           <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
         <ul>
