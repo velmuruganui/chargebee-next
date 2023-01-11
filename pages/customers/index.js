@@ -13,7 +13,7 @@ export default function CustomersPage({customers}){
         <title>Customers & Testimonials - Chargebee</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container mx-auto my-8">
+      <div className="container mx-auto my-10">
         <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {customers.map((customer) => (
             <li key={customer.slug} className="flex col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow">
