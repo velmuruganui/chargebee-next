@@ -36,6 +36,17 @@ export async function getStaticProps({ params }) {
                     items {
                         slug
                         seoTitle
+                        seoDescription
+                        seoNoIndex
+                        productCategory
+                        customerLogo
+                        heroBannerImage{
+                          url
+                        }
+                        seoImage{
+                          url
+                        }
+                        heroBannerDescription
                     }
                   }
                 }

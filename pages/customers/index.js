@@ -1,8 +1,11 @@
 import Head from "next/head";
+import Image from "next/future/image";
 import Link from "next/link";
 
 
+
 export default function CustomersPage({customers}){
+  console.log(customers);
   return(
     <>
       <Head>
@@ -10,17 +13,29 @@ export default function CustomersPage({customers}){
         <title>Customers & Testimonials - Chargebee</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        <ul>
-          {
-            customers.map((customer) => (
-              <li key={customer.slug}>
-                <Link href={`customers/${customer.slug}`} passHref> 
-                  <a>{customer.slug} - { customer.seoTitle }</a> 
-                </Link>
-              </li>
-            ))
-          };
+      <div className="container mx-auto my-8">
+        <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {customers.map((customer) => (
+            <li key={customer.slug} className="flex col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow">
+              <Link href={`customers/${customer.slug}`} passHref> 
+                <a>
+                  <div className="space-x-6 p-6">
+                    <div className="flex-1">
+                      <p className="mt-1 text-sm text-gray-500">{customer.heroTitle}</p>
+                    </div>
+                    <div className="mt-4">
+                      <Image className="" 
+                        src={customer.companyLogo.url} 
+                        alt="" 
+                        width={300}
+                        height={200}
+                      />
+                    </div>
+                  </div>
+                </a>
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </>
@@ -41,8 +56,9 @@ export async function getStaticProps(){
           query {
             caseStudiesCollection{
               items{
+                heroTitle
+                companyLogo{url}
                 slug
-                seoTitle
               }
             }
           }
