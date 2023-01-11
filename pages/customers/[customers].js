@@ -1,13 +1,74 @@
 import Head from "next/head";
+import Image from "next/image";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 
 export default function CustomerPage({ customers }){
+  console.log(customers);
   return(
     <>
       <Head>
+        <title>{customers.seoTitle}</title>
+        <meta
+          name="description"
+          content={customers.seoDescription}
+        />
         <meta name="robots" content="noindex,nofollow"></meta>
       </Head>
-      <h1>{ customers.seoTitle }</h1>
-      <h6>{ customers.slug }</h6>
+      <div className="container mx-auto my-10">
+
+        <div className="hero-banner py-10">
+          <Image className="" 
+            src={customers.heroBannerImage.url} 
+            alt="" 
+            width={300}
+            height={200}
+          />
+        </div>
+        <div className="logo py-10">
+          <Image className="" 
+            src={customers.companyLogo.url} 
+            alt="" 
+            width={300}
+            height={200}
+          />
+        </div>
+        <div className="py-10">
+          {customers.heroTitle}
+          <br />
+          {customers.heroDescription}
+        </div>
+        <div className="before-cb py-10">
+          {
+            customers ? documentToReactComponents(customers.beforeChargebee.json) : "" 
+          }
+        </div>
+        <div className="after-cb py-10">
+          {
+            customers ? documentToReactComponents(customers.afterChargebee.json) : "" 
+          }
+        </div>
+        <div className="maincontent py-10">
+          {
+            customers ? documentToReactComponents(customers.mainContent.json) : "" 
+          }
+        </div>
+        <div className="tech-stack py-10">
+          {
+            customers ? documentToReactComponents(customers. addressAndTechStack.json) : "" 
+          }
+        </div>
+        <div className="testimonial py-10">
+          <Image className="" 
+            src={customers.testimonialImage.url} 
+            alt="" 
+            width={300}
+            height={200}
+          />
+          <p>{customers.testimonialAuthor }</p>
+          <p>{customers.testimonialDescription }</p>
+        </div>
+      </div>
     </> 
   )
 }
@@ -33,20 +94,84 @@ export async function getStaticProps({ params }) {
                     },
                     limit: 1
                   ){
-                    items {
-                        slug
-                        seoTitle
-                        seoDescription
-                        seoNoIndex
-                        productCategory
-                        customerLogo
-                        heroBannerImage{
-                          url
+                    items{
+                      seoTitle
+                      seoDescription
+                      heroBannerImage{
+                        url
+                      }
+                      companyLogo{
+                        url
+                      }
+                      heroTitle
+                      heroDescription
+                      testimonialImage{url}
+                      testimonialAuthor
+                      testimonialDescription
+                      beforeChargebee{
+                        json
+                        links{
+                          entries{
+                            inline{
+                              sys{
+                                id
+                              }
+                              __typename
+                              ... on CaseStudies {
+                                seoTitle
+                              }
+                            }
+                          }
                         }
-                        seoImage{
-                          url
+                      }
+                      afterChargebee{
+                        json
+                        links{
+                          entries{
+                            inline{
+                              sys{
+                                id
+                              }
+                              __typename
+                              ... on CaseStudies {
+                                seoTitle
+                              }
+                            }
+                          }
                         }
-                        heroBannerDescription
+                      }
+                      mainContent{
+                        json
+                        links{
+                          entries{
+                            inline{
+                              sys{
+                                id
+                              }
+                              __typename
+                              ... on CaseStudies {
+                                seoTitle
+                              }
+                            }
+                          }
+                        }
+                      }
+                      addressAndTechStack{
+                        json
+                        links{
+                          entries{
+                            inline{
+                              sys{
+                                id
+                              }
+                              __typename
+                              ... on CaseStudies {
+                                seoTitle
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
