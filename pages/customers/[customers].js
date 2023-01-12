@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 
@@ -40,22 +41,22 @@ export default function CustomerPage({ customers }){
         </div>
         <div className="before-cb py-10">
           {
-            customers ? documentToReactComponents(customers.beforeChargebee.json) : "" 
+            customers ? documentToReactComponents(customers.beforeChargebee.json, options) : "" 
           }
         </div>
         <div className="after-cb py-10">
           {
-            customers ? documentToReactComponents(customers.afterChargebee.json) : "" 
+            customers ? documentToReactComponents(customers.afterChargebee.json, options) : "" 
           }
         </div>
         <div className="maincontent py-10">
           {
-            customers ? documentToReactComponents(customers.mainContent.json) : "" 
+            customers ? documentToReactComponents(customers.mainContent.json, options) : "" 
           }
         </div>
         <div className="tech-stack py-10">
           {
-            customers ? documentToReactComponents(customers. addressAndTechStack.json) : "" 
+            customers ? documentToReactComponents(customers. addressAndTechStack.json, options ) : "" 
           }
         </div>
         <div className="testimonial py-10">
@@ -73,6 +74,13 @@ export default function CustomerPage({ customers }){
   )
 }
   
+const options = {
+  renderMark: {
+    [MARKS.BOLD]: text => <span style={{fontSize:"100px"}}>{text}</span>,
+    [MARKS.ITALIC]: text => <span style={{fontSize:"150px"}}>{text}</span>,
+    [MARKS.UNDERLINE]: text => <span style={{ textUnderlineOffset:'0.5rem' }}>{text}</span>,
+  }, 
+};
 
 export async function getStaticProps({ params }) {
   const { customers } = params;
