@@ -2,7 +2,9 @@ import Head from "next/head";
 import Image from "next/future/image";
 import Link from "next/link";
 
-
+// export const config = {
+//   unstable_runtimeJS: false
+// };
 
 export default function CustomersPage({customers}){
   console.log(customers);
