@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 // import { MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-
+import Script from "next/script";
 
 export default function CustomerPage({ customers }){
   console.log(customers);
@@ -16,6 +16,9 @@ export default function CustomerPage({ customers }){
         />
         <meta name="robots" content="noindex,nofollow"></meta>
       </Head>
+      <Script 
+        src="https://code.jquery.com/jquery-3.6.3.js" 
+      />
       <div className="container mx-auto my-10">
 
         <div className="hero-banner py-10">
