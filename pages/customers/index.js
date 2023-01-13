@@ -1,9 +1,8 @@
 import Head from "next/head";
 import Image from "next/future/image";
 import Link from "next/link";
-// import Script from "next/script";
+import Script from "next/script";
 
-// const test = true
 
 export default function CustomersPage({customers}){
   console.log(customers);
@@ -14,9 +13,9 @@ export default function CustomersPage({customers}){
         <title>Customers & Testimonials - Chargebee</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Script 
+      <Script 
         src="https://code.jquery.com/jquery-3.6.3.js" 
-      /> */}
+      />
       <div className="container mx-auto my-10">
         <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {customers.map((customer) => (
