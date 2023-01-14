@@ -5,7 +5,6 @@ import Script from "next/script";
 
 
 export default function CustomersPage({customers}){
-  console.log(customers);
   return(
     <>
       <Head>
