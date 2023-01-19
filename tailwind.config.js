@@ -5,14 +5,6 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {
-      fontFamily:{
-        sans:  "SF Pro Display"
-      },
-      colors:{
-        background: "#3f3f3f"
-      }
-    },
   },
   plugins: [
    
