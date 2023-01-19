@@ -3,8 +3,7 @@
 
 
 
-export default function CustomersPage({customers}){
-  console.log(customers);
+export default function CustomersPage({}){
   return(
     <>
       <div>
