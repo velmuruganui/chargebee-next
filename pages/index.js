@@ -7,6 +7,6 @@ export default function Home(){
       <Link href='/customers'>Customer</Link> 
       <p>Just try</p>
       <div>Hello world!</div>
-    </div>
+    </div> 
   )
 }
